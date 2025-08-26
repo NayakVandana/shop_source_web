@@ -1,15 +1,16 @@
-'use client'
 
-import { useSession, signOut } from 'next-auth/react'
+
+import { signOut } from 'next-auth/react'
 import Link from 'next/link'
 import { useThemeStore } from '@/utils/useThemeStore'
 import { themeConfig } from '@/utils/themeConfig'
+import { isLoggedin } from "@/utils/isLoggedin";
 
-export default function Navbar() {
-  const { status } = useSession()
+export default async function Navbar() {
+
   const { theme, toggleTheme } = useThemeStore()
-  const themeClasses = themeConfig[theme]
-
+  const themeClasses = themeConfig[theme];
+const isLogin = await isLoggedin();
   return (
     <nav className={`p-4 ${themeClasses.button}`}>
       <div className="container mx-auto flex justify-between items-center">
@@ -17,7 +18,7 @@ export default function Navbar() {
         <div className="space-x-4 flex items-center">
           <Link href="/guest-products" className={themeClasses.text}>Products</Link>
           <Link href="/contact-us" className={themeClasses.text}>Contact Us</Link>
-          {status === 'authenticated' ? (
+          {isLogin ? (
             <>
               <Link href="/user-products" className={themeClasses.text}>My Products</Link>
               <button

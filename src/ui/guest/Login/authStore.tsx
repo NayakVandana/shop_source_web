@@ -28,7 +28,7 @@ export const useAuthStore = create(
         setUser: (user: any) => {
             set((state: any) => ({ ...state, user, isLoggedIn: true }))
         },
-        login: async (callback) => {
+        login: async (callback: any) => {
             // apiCall('user/login', data, {
             var state = await getSession({
                 // req: false

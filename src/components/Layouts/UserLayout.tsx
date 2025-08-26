@@ -1,10 +1,11 @@
+'use client'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import { useThemeStore } from '@/utils/useThemeStore'
 import { themeConfig } from '@/utils/themeConfig'
 
 export default function UserLayout({ children }) {
-  const { theme } = useThemeStore()
+  const { theme } = useThemeStore();
   const themeClasses = themeConfig[theme]
 
   return (

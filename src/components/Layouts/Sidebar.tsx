@@ -7,7 +7,7 @@ import { themeConfig } from '@/utils/themeConfig'
 
 export default function Sidebar() {
   const { data: session } = useSession()
-  const isAdmin = session?.user?.role === 'admin'
+  const isAdmin = session?.user?.role === 'ADMIN'
   const { theme } = useThemeStore()
   const themeClasses = themeConfig[theme]
 

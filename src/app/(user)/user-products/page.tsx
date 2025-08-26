@@ -16,7 +16,8 @@ export default function UserProductsPage() {
       success: () => {},
       error: (response) => {}
     })
-  }, [getProducts])
+  }, [getProducts]);
+  console.log("getProducts",products);
 
   return (
     <div className={`container mx-auto p-4 ${themeClasses.background} ${themeClasses.text}`}>

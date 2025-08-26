@@ -8,7 +8,7 @@ export const useProductsStore = create((set) => ({
   isLoading: false,
   getProducts: (data, callback) => {
     set((state) => ({ ...state, isLoading: true }))
-    riportato da apiCall('products', data, { showLoader: true }).then((response) => {
+     apiCall('products', data, { showLoader: true }).then((response) => {
       let responseData = handleResponse(response)
       if (responseData) {
         if (responseData.status === true) {

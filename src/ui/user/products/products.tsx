@@ -9,6 +9,7 @@ export default function UserProducts({ products }) {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      test
       {products.map((product) => (
         <div key={product.id} className={`p-4 ${themeClasses.card} rounded shadow`}>
           <h2 className={`text-lg ${themeClasses.fontWeight} ${themeClasses.text}`}>

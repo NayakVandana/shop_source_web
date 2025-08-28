@@ -12,7 +12,7 @@ export default async function Navbar() {
   const themeClasses = themeConfig[theme];
 const isLogin = await isLoggedin();
   return (
-    <nav className={`p-4 ${themeClasses.button}`}>
+    <nav className={`p-4 ${themeClasses.background}`}>
       <div className="container mx-auto flex justify-between items-center">
         <Link href="/" className={`text-xl ${themeClasses.fontWeight} ${themeClasses.text}`}>ShopSource</Link>
         <div className="space-x-4 flex items-center">

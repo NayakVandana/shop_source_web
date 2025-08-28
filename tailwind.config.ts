@@ -7,6 +7,12 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/ui/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+   safelist: [
+    'bg-white', 'text-gray-900', 'bg-blue-500', 'hover:bg-blue-600', 'text-white',
+    'border-blue-500', 'bg-gray-100', 'font-normal', 'text-base',
+    'bg-gray-900', 'text-gray-100', 'bg-blue-700', 'hover:bg-blue-800',
+    'border-blue-700', 'bg-gray-800', 'font-medium',
+  ],
   theme: {
     extend: {
       backgroundImage: {

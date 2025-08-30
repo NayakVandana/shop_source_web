@@ -1,10 +1,11 @@
-'use client'
+'use client' // Zustand store must be client
 
 import { create } from 'zustand'
 
 export const useThemeStore = create((set) => ({
   theme: 'light',
-  toggleTheme: () => set((state) => ({
-    theme: state.theme === 'light' ? 'dark' : 'light',
-  })),
+  toggleTheme: () =>
+    set((state) => ({
+      theme: state.theme === 'light' ? 'dark' : 'light',
+    })),
 }))
